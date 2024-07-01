@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header"><strong>
+          {{ record.first_name }} 
+          {{ record.last_name }}</strong>
+    </div>
+    <div class="card-body">
+  
+  
+  
+  <p class="card-text">
+  <strong>Email: </strong>{{ record.email }}</p>
+  
+  <p class="card-text">
+  <strong>Phone: </strong>{{record.phone }}
+  </p>
+  
+  <p class="card-text">
+  <strong>Address: </strong>{{record.adress }}</p>
+  
+  <p class="card-text">
+  <strong>City: </strong>{{ record.city }}</p>
+  
+  <p class="card-text">
+  <strong>State: </strong>{{ record.state }}</p>
+  
+  <p class="card-text">
+  <strong>Zipcode: </strong>{{ record.zipcode }}</p>
+  
+  <p class="card-text">
+  <strong>Create At: </strong>{{ record.created_at }}</p>
+  
+  <p class="card-text">
+  <strong>ID: </strong>{{ record.id }}</p>
+      
+      
+    </div>
+  </div>
+  
+  <br/><br/>
+  <a href="{% url 'website:home' %}" class="btn btn-secondary">Back</a>
+  <a href="{% url 'website:deleteRecord' record.id %}" class="btn btn-danger">Delete</a>
+  <a href="{% url 'website:updateRecord' record.id %}" class="btn btn-success">Update</a>
+  
+
+          
+<!-- <h1>Record</h1>
+<table class="table table-striped table-hover table-bordered table-sm">
+    <thead class="table-dark">
+      <tr>
+        <th scope="row">#</th>
+        <th scope="row">First Name</th>
+        <th scope="row">Last Name</th>
+        <th scope="row">Phone</th>
+        <th scope="row">Email</th>
+        <th scope="row">Adress</th>
+        <th scope="row">City</th>
+        <th scope="row">State</th>
+        <th scope="row">Zip code</th>
+        <th scope="row">Created</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr>
+        <th scope="col"><a href="#">{{ record.id }}</a></th>
+        <td>{{record.first_name}}</td>
+        <td>{{record.last_name}}</td>
+        <td>{{record.phone}}</td>
+        <td>{{record.email}}</td>
+        <td>{{record.adress}}</td>
+        <td>{{record.city}}</td>
+        <td>{{record.state}}</td>
+        <td>{{record.zipcode}}</td>
+        <td>{{record.created_at}}</td>
+      </tr>
+    </tbody>
+  </table> -->
+{% endblock %}
